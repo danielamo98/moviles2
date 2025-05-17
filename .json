@@ -1,0 +1,143 @@
+{
+  "categoriasEvento": {
+    "baseUrl": "http://localhost:8080/api/categoriasevento",
+    "routes": [
+      {
+        "method": "POST",
+        "description": "Crea una nueva categoría de evento.",
+        "url": "http://localhost:8080/api/categoriasevento",
+        "body": {
+          "nombre": "clases"
+        }
+      },
+      {
+        "method": "GET",
+        "description": "Devuelve los datos de una categoría por su ID.",
+        "url": "http://localhost:8080/api/categoriasevento/{id}"
+      },
+      {
+        "method": "PUT",
+        "description": "Actualiza los datos de una categoría existente.",
+        "url": "http://localhost:8080/api/categoriasevento/{id}",
+        "body": {
+          "id": 1,
+          "nombre": "Taller Educativo"
+        }
+      },
+      {
+        "method": "DELETE",
+        "description": "Elimina una categoría por su ID.",
+        "url": "http://localhost:8080/api/categoriasevento/{id}"
+      },
+      {
+        "method": "GET",
+        "description": "Devuelve una categoría de evento según el nombre.",
+        "url": "http://localhost:8080/api/categoriasevento/buscar?nombre={nombre}"
+      },
+      {
+        "method": "GET",
+        "description": "Devuelve una lista de todas las categorías.",
+        "url": "http://localhost:8080/api/categoriasevento"
+      }
+    ]
+  },
+
+  "asistenciaEventos": {
+    "baseUrl": "http://localhost:8080/api/asistenciaeventos",
+    "routes": [
+      {
+        "method": "POST",
+        "description": "Registra una nueva asistencia.",
+        "url": "http://localhost:8080/api/asistenciaeventos",
+        "body": {
+          "id": 1,
+          "eventoId": 123,
+          "estudianteId": 123,
+          "asistencia": "asistio"
+        }
+      },
+      {
+        "method": "GET",
+        "description": "Devuelve todas las asistencias registradas.",
+        "url": "http://localhost:8080/api/asistenciaeventos"
+      },
+      {
+        "method": "GET",
+        "description": "Devuelve una asistencia específica por su ID.",
+        "url": "http://localhost:8080/api/asistenciaeventos/1"
+      },
+      {
+        "method": "PUT",
+        "description": "Actualiza los datos de una asistencia existente.",
+        "url": "http://localhost:8080/api/asistenciaeventos/1",
+        "body": {
+          "id": 1,
+          "eventoId": 123,
+          "estudianteId": 123,
+          "asistencia": "asistio"
+        }
+      },
+      {
+        "method": "DELETE",
+        "description": "Elimina una asistencia por su ID.",
+        "url": "http://localhost:8080/api/asistenciaeventos/1"
+      }
+    ]
+  },
+
+  "estudiantes": {
+    "baseUrl": "http://localhost:8080/api/estudiantes",
+    "routes": [
+      {
+        "method": "POST",
+        "description": "Registra un nuevo estudiante.",
+        "url": "http://localhost:8080/api/estudiantes",
+        "body": {
+          "nombre": "Daniela",
+          "apellido": "Mejia",
+          "correo": "daniela@gmail.com",
+          "matricula": "español",
+          "grado": "10",
+          "grupo": "a",
+          "fechaDeNacimiento": "1998-06-20",
+          "teléfono": "320477598"
+        }
+      },
+      {
+        "method": "GET",
+        "description": "Devuelve todos los estudiantes por id.",
+        "url": "http://localhost:8080/api/estudiantes/1"
+      },
+      {
+        "method": "GET",
+        "description": "Devuelve un estudiante específico por su ID.",
+        "url": "http://localhost:8080/api/estudiantes/1"
+      },
+      {
+        "method": "PUT",
+        "description": "Actualiza la información de un estudiante.",
+        "url": "http://localhost:8080/api/estudiantes/1",
+        "body": {
+          "nombre": "Daniela",
+          "apellido": "Mejia",
+          "correo": "daniela@gmail.com",
+          "matricula": "español",
+          "grado": "10",
+          "grupo": "a",
+          "fechaDeNacimiento": "1998-06-20",
+          "teléfono": "320477598"
+        }
+      },
+      {
+        "method": "DELETE",
+        "description": "Elimina un estudiante por su ID.",
+        "url": "http://localhost:8080/api/estudiantes/1"
+      },
+      {
+        "method": "GET",
+        "description": "Devuelve una lista de todos los estudiantes.",
+        "url": "http://localhost:8080/api/estudiantes"
+      }
+    ]
+  }
+}
