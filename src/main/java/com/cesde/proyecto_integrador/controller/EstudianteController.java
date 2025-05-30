@@ -41,8 +41,7 @@ public class EstudianteController {
     @PutMapping("/{id}")
     public ResponseEntity<Estudiante> actualizarEstudiante(@PathVariable Long id, @RequestBody Estudiante estudiante) {
         Estudiante actualizado = estudianteService.actualizarEstudiante(id, estudiante);
-        Estudiante actualizada = estudianteService.creaEstudiante(actualizado);
-        return ResponseEntity.ok(actualizada);
+        return ResponseEntity.ok(actualizado);
     }
 
     // Eliminar estudiante

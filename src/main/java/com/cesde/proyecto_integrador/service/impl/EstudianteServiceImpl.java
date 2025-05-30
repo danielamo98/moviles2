@@ -36,6 +36,13 @@ public class EstudianteServiceImpl implements EstudianteService {
     public Estudiante actualizarEstudiante(Long id, Estudiante estudiante){
     Estudiante existingUser = obtenerEstudianteporId(id);
     existingUser.setNombre(estudiante.getNombre());
+    existingUser.setApellido(estudiante.getApellido());
+    existingUser.setCorreo(estudiante.getCorreo());
+    existingUser.setTeléfono(estudiante.getTeléfono());
+    existingUser.setGrado(estudiante.getGrado());
+    existingUser.setGrupo(estudiante.getGrupo());
+    existingUser.setFechaDeNacimiento(estudiante.getFechaDeNacimiento());
+    existingUser.setMatricula(estudiante.getMatricula());
     return estudianteRepository.save(existingUser);
     }
 
