@@ -38,6 +38,12 @@ public class EventoImpl implements EventoService {
     @Override
     public Evento actualizarEvento(Long id, Evento evento) {
         Evento existingEvento = obtenerEventoPorId(id);
+        existingEvento.setTítulo(evento.getTítulo());
+        existingEvento.setDescripción(evento.getDescripción());
+        existingEvento.setFecha(evento.getFecha());
+        existingEvento.setLugar(evento.getLugar());
+        existingEvento.setImagen(evento.getImagen());
+
         return eventoRepository.save(existingEvento);
     }
 
