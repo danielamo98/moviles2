@@ -139,5 +139,55 @@
         "url": "http://localhost:8080/api/estudiantes"
       }
     ]
+  },
+
+  "eventos": {
+    "baseUrl": "http://localhost:8080/api/eventos",
+    "routes": [
+      {
+        "method": "POST",
+        "description": "Registra un nuevo evento.",
+        "url": "http://localhost:8080/api/eventos",
+        "body": {
+          "título": "semana de ciencia",
+          "descripción": "expocision de experimentos",
+          "fecha": "2025-05-09",
+          "lugar": "coliseo",
+          "imagen": ""
+        }
+      },
+      {
+        "method": "GET",
+        "description": "Devuelve todos los eventos.",
+        "url": "http://localhost:8080/api/eventos"
+      },
+      {
+        "method": "GET",
+        "description": "Devuelve un evento específico por su ID.",
+        "url": "http://localhost:8080/api/eventos/1"
+      },
+      {
+        "method": "PUT",
+        "description": "Actualiza la información de un evento.",
+        "url": "http://localhost:8080/api/eventos/1",
+        "body": {
+          "título": "semana de ciencia",
+          "descripción": "expocision de experimentos",
+          "fecha": "2025-05-09",
+          "lugar": "coliseo",
+          "imagen": ""
+        }
+      },
+      {
+        "method": "DELETE",
+        "description": "Elimina un evento por su ID.",
+        "url": "http://localhost:8080/api/eventos/1"
+      },
+      {
+        "method": "GET",
+        "description": "Devuelve una lista de todos los eventos.",
+        "url": "http://localhost:8080/api/eventos"
+      }
+    ]
   }
 }

@@ -1,5 +1,6 @@
 package com.cesde.proyecto_integrador.controller;
 
+import com.cesde.proyecto_integrador.model.AsistenciaEvento;
 import com.cesde.proyecto_integrador.model.Estudiante;
 import com.cesde.proyecto_integrador.service.EstudianteService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,7 +41,8 @@ public class EstudianteController {
     @PutMapping("/{id}")
     public ResponseEntity<Estudiante> actualizarEstudiante(@PathVariable Long id, @RequestBody Estudiante estudiante) {
         Estudiante actualizado = estudianteService.actualizarEstudiante(id, estudiante);
-        return ResponseEntity.ok(actualizado);
+        Estudiante actualizada = estudianteService.creaEstudiante(actualizado);
+        return ResponseEntity.ok(actualizada);
     }
 
     // Eliminar estudiante
