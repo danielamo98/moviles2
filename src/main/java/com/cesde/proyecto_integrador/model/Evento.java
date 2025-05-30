@@ -26,7 +26,7 @@ public class Evento {
     private String imagen;
 
     @OneToMany(mappedBy = "evento", cascade = CascadeType.ALL, orphanRemoval = true)
-    private Participante participantes;
+    private Participante participante;
 
 
     @ManyToOne
