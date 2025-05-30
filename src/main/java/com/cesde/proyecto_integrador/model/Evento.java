@@ -3,6 +3,7 @@ package com.cesde.proyecto_integrador.model;
 import java.sql.Date;
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -32,7 +33,7 @@ public class Evento {
     @JoinColumn(name = "categoria_id")
     private CategoriaEvento categoria;
 
-    @OneToMany(mappedBy = "evento")
+    @OneToMany(mappedBy = "evento", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<AsistenciaEvento> asistencias;
 
     @ManyToOne
