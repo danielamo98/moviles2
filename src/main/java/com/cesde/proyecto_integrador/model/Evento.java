@@ -24,7 +24,9 @@ public class Evento {
     private String lugar;
     private String imagen;
 
-    @OneToMany(mappedBy = "participante_id")
+
+    @OneToMany
+    @JoinColumn(name = "participante_id")
     private Participante participante;
 
 
@@ -32,7 +34,8 @@ public class Evento {
     @JoinColumn(name = "categoria_id")
     private CategoriaEvento categoria;
 
-    @OneToMany(mappedBy = "asistenciaEvento_id")
+    @OneToMany
+    @JoinColumn(name = "asistenciaEvento_id")
     private AsistenciaEvento asistenciaEvento;
 
     @ManyToOne
