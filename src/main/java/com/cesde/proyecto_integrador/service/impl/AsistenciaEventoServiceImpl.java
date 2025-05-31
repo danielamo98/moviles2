@@ -8,7 +8,7 @@ import com.cesde.proyecto_integrador.repository.AsistenciaEventoRepository;
 import com.cesde.proyecto_integrador.service.AsistenciaEventoService;
 
 @Service
-public class AsistenciaEventoImpl implements AsistenciaEventoService {
+public class AsistenciaEventoServiceImpl implements AsistenciaEventoService {
 
     @Autowired
     public AsistenciaEventoRepository AsistenciaEventoRepository;
