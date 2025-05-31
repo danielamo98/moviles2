@@ -51,7 +51,3 @@ public class ParticipanteController {
         return ResponseEntity.noContent().build();
     }
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 0cff71a61388702957029836d2a5be6f69cd58eb

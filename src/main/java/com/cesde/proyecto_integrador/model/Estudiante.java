@@ -25,7 +25,6 @@ public class Estudiante {
      private Date fechaDeNacimiento;
      private String teléfono;
     
-@OneToMany(mappedBy = "estudiante")
-private List<Participante> participante;
+
 
 }

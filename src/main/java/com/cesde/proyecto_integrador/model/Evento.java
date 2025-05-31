@@ -1,7 +1,7 @@
 package com.cesde.proyecto_integrador.model;
 
 import java.sql.Date;
-import java.util.List;
+
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -29,16 +29,6 @@ public class Evento {
     private Participante participante;
 
 
-    @ManyToOne
-    @JoinColumn(name = "categoria_id")
-    private CategoriaEvento categoria;
-
-    @OneToMany(mappedBy = "asistenciaEvento_id")
-    private AsistenciaEvento asistenciaEvento;
-
-    @ManyToOne
-    @JoinColumn(name = "profesor_id")
-    private Profesor profesor;
-
+ 
 
 }

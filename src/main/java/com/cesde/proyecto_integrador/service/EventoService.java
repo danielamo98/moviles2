@@ -10,9 +10,4 @@ public interface EventoService {
      public Evento obtenerEventoPorId(Long id);
      public Evento actualizarEvento(Long id, Evento evento);
        public void eliminarEvento(Long id);
-
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 0cff71a61388702957029836d2a5be6f69cd58eb
