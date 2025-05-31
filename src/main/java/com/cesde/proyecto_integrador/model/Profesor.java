@@ -18,7 +18,6 @@ public class Profesor {
     private Long id;
     private String nombre;
     private String correo;
-    private String codigoEmpleo;
     private String telefono;
     private Date fechaIngreso;
 

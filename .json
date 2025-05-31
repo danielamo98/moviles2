@@ -139,5 +139,146 @@
         "url": "http://localhost:8080/api/estudiantes"
       }
     ]
-  }
+  },
+
+  "eventos": {
+    "baseUrl": "http://localhost:8080/api/eventos",
+    "routes": [
+      {
+        "method": "POST",
+        "description": "Registra un nuevo evento.",
+        "url": "http://localhost:8080/api/eventos",
+        "body": {
+          "título": "semana de ciencia",
+          "descripción": "expocision de experimentos",
+          "fecha": "2025-05-09",
+          "lugar": "coliseo",
+          "imagen": ""
+        }
+      },
+      {
+        "method": "GET",
+        "description": "Devuelve todos los eventos.",
+        "url": "http://localhost:8080/api/eventos"
+      },
+      {
+        "method": "GET",
+        "description": "Devuelve un evento específico por su ID.",
+        "url": "http://localhost:8080/api/eventos/1"
+      },
+      {
+        "method": "PUT",
+        "description": "Actualiza la información de un evento.",
+        "url": "http://localhost:8080/api/eventos/1",
+        "body": {
+          "título": "semana de ciencia",
+          "descripción": "expocision de experimentos",
+          "fecha": "2025-05-09",
+          "lugar": "coliseo",
+          "imagen": ""
+        }
+      },
+      {
+        "method": "DELETE",
+        "description": "Elimina un evento por su ID.",
+        "url": "http://localhost:8080/api/eventos/1"
+      },
+      {
+        "method": "GET",
+        "description": "Devuelve una lista de todos los eventos.",
+        "url": "http://localhost:8080/api/eventos"
+      }
+    ]
+  },
+    "participantes": {
+    "baseUrl": "http://localhost:8080/api/participantes",
+    "routes": [
+      {
+        "method": "POST",
+        "description": "Registra un nuevo participante en un evento.",
+        "url": "http://localhost:8080/api/participantes",
+        "body": {
+          "eventoId": 1,
+          "asistencia": "asistio"
+        }
+      },
+      {
+        "method": "GET",
+        "description": "Devuelve todos los participantes de un evento.",
+        "url": "http://localhost:8080/api/participantes"
+      },
+      {
+        "method": "GET",
+        "description": "Devuelve un participante específico por su ID.",
+        "url": "http://localhost:8080/api/participantes/{id}"
+      },
+      {
+        "method": "PUT",
+        "description": "Actualiza la información de un participante.",
+        "url": "http://localhost:8080/api/participantes/{id}",
+        "body": {
+          "eventoId": 1,
+          "asistencia":"asistio"
+        }
+      },
+      {
+        "method": "DELETE",
+        "description": "Elimina un participante por su ID.",
+        "url": "http://localhost:8080/api/participantes/{id}"
+      },
+      {
+        "method": "GET",
+        "description": "Devuelve una lista de todos los participantes.",
+        "url": "http://localhost:8080/api/participantes"
+      }
+
+    ]
+},
+"profesor": {
+    "baseUrl": "http://localhost:8080/api/profesores",
+    "routes": [
+      {
+        "method": "POST",
+        "description": "Registra un nuevo profesor.",
+        "url": "http://localhost:8080/api/profesores",
+        "body": {
+          "nombre": "Juan",
+          "correo": "juan@gail.com",
+          "teléfono": 320477598,
+          "fechaIngreso": "2023-01-01"
+        }
+      },
+      {
+        "method": "GET",
+        "description": "Devuelve todos los participantes de un evento.",
+        "url": "http://localhost:8080/api/participantes"
+      },
+      {
+        "method": "GET",
+        "description": "Devuelve un participante específico por su ID.",
+        "url": "http://localhost:8080/api/participantes/{id}"
+      },
+      {
+        "method": "PUT",
+        "description": "Actualiza la información de un participante.",
+        "url": "http://localhost:8080/api/participantes/{id}",
+        "body": {
+          "eventoId": 1,
+          "asistencia":"asistio"
+        }
+      },
+      {
+        "method": "DELETE",
+        "description": "Elimina un participante por su ID.",
+        "url": "http://localhost:8080/api/participantes/{id}"
+      },
+      {
+        "method": "GET",
+        "description": "Devuelve una lista de todos los participantes.",
+        "url": "http://localhost:8080/api/participantes"
+      }
+
+    ]
 }
+}
+
