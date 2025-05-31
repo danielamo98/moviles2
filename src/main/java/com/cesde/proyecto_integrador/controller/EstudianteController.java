@@ -1,5 +1,6 @@
 package com.cesde.proyecto_integrador.controller;
 
+import com.cesde.proyecto_integrador.model.AsistenciaEvento;
 import com.cesde.proyecto_integrador.model.Estudiante;
 import com.cesde.proyecto_integrador.service.EstudianteService;
 import org.springframework.beans.factory.annotation.Autowired;

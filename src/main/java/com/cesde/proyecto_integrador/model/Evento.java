@@ -24,16 +24,17 @@ public class Evento {
     private String lugar;
     private String imagen;
 
-    @OneToMany(mappedBy = "evento")
-    private List<Participante> participantes;
+    
+    @OneToMany(mappedBy = "participante_id")
+    private Participante participante;
 
 
     @ManyToOne
     @JoinColumn(name = "categoria_id")
     private CategoriaEvento categoria;
 
-    @OneToMany(mappedBy = "evento")
-    private List<AsistenciaEvento> asistencias;
+    @OneToMany(mappedBy = "asistenciaEvento_id")
+    private AsistenciaEvento asistenciaEvento;
 
     @ManyToOne
     @JoinColumn(name = "profesor_id")
